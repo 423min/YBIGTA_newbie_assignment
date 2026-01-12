@@ -55,13 +55,12 @@ done
 
 # mypy 테스트 실행 및 mypy_log.txt 저장
 ## TODO
-mypy . > mypy_log.txt 2>&1
+mypy . > ../mypy_log.txt 2>&1
 
 
 # conda.yml 파일 생성
 ## TODO
-conda env export > conda.yml
-
+conda env export > ../conda.yml
 
 # 가상환경 비활성화
 ## TODO
