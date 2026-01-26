@@ -132,7 +132,7 @@ class MultiLayerPerceptron(object):
         dz1 = dh2 @ W2.T
         
         relu_grad = (h1 > 0).astype(float)
-        dh1 = (dz1 + dh1_direct) * relu_grad
+        dh1 = (dz1 * relu_grad) + dh1_direct
         db1 = np.sum(dh1, axis=0)
         dW1 = X.T @ dh1 + 2 * L2_norm * W1
        
